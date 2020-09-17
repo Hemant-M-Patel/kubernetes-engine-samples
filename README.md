@@ -38,6 +38,23 @@ docker build -t gcr.io/%PROJECT_ID%/hello-app:v1 .
 ```
 docker run --rm -p 8080:8080 gcr.io/%PROJECT_ID%/hello-app:v1
 ```
+- Push the Image so that we can deploy into k8s cluster
+```
+gcloud auth configure-docker
+docker push gcr.io/%PROJECT_ID%/hello-app:v1
+```
+Setup GKE
+```
+gcloud config set project $PROJECT_ID
+gcloud config set compute/zone compute-zone
+gcloud container clusters create hello-cluster
+gcloud compute instances list
+kubectl create deployment hello-app --image=gcr.io/%PROJECT_ID%/hello-app:v1
+kubectl get pods
+kubectl expose deployment hello-app --name=hello-app-service --type=LoadBalancer --port 80 --target-port 8080
+kubectl get service
+```
+
 ## Contributing changes
 
 * See [CONTRIBUTING.md](CONTRIBUTING.md)
