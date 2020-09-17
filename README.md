@@ -54,7 +54,11 @@ kubectl expose deployment hello-app --name=hello-app-service --type=LoadBalancer
 kubectl get service
 curl <External IP address>
 ```
-
+- Cleanup
+```
+kubectl delete service hello-app-service
+gcloud container clusters delete hello-cluster
+```
 ## Contributing changes
 
 * See [CONTRIBUTING.md](CONTRIBUTING.md)
