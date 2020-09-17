@@ -1,12 +1,4 @@
-# Kubernetes Engine Samples
 
-This repository contains sample applications used in
-[Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/) tutorials.
-
-See the following resources to learn more:
-
-- [Google Kubernetes Engine - Quickstart](https://cloud.google.com/kubernetes-engine/docs/quickstart)
-- [Google Kubernetes Engine - Tutorials](https://cloud.google.com/kubernetes-engine/docs/tutorials)
 
 # Quick Start GCP Kubernetes on Windows with Hello World App
 
@@ -59,6 +51,17 @@ curl <External IP address>
 kubectl delete service hello-app-service
 gcloud container clusters delete hello-cluster
 ```
+
+# Kubernetes Engine Samples
+
+This repository contains sample applications used in
+[Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/) tutorials.
+
+See the following resources to learn more:
+
+- [Google Kubernetes Engine - Quickstart](https://cloud.google.com/kubernetes-engine/docs/quickstart)
+- [Google Kubernetes Engine - Tutorials](https://cloud.google.com/kubernetes-engine/docs/tutorials)
+
 ## Contributing changes
 
 * See [CONTRIBUTING.md](CONTRIBUTING.md)
