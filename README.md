@@ -16,12 +16,28 @@ See the following resources to learn more:
 - [Install Docker for Windows](https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe)
 - Sign up for Free Google Cloud Account using your gmail ID - https://cloud.google.com/
 - [Download gCloud tool for Windows](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
-- Initialize your Local gcloud env
+- Initialize your Local gcloud env and set the default project
 ```
 gcloud init
 ```
-
-
+- Handy way to get current project and set an environment variable
+```
+gcloud config get-value project
+set PROJECT_ID=<project value>
+```
+- Clone the Repo
+```
+git clone https://github.com/GoogleCloudPlatform/kubernetes-engine-samples
+cd kubernetes-engine-samples/hello-app
+```
+- Build docker Image
+```
+docker build -t gcr.io/%PROJECT_ID%/hello-app:v1 .
+```
+- Run it locally
+```
+docker run --rm -p 8080:8080 gcr.io/%PROJECT_ID%/hello-app:v1
+```
 ## Contributing changes
 
 * See [CONTRIBUTING.md](CONTRIBUTING.md)
