@@ -16,6 +16,10 @@ See the following resources to learn more:
 - [Install Docker for Windows](https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe)
 - Sign up for Free Google Cloud Account using your gmail ID - https://cloud.google.com/
 - [Download gCloud tool for Windows](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
+- Initialize your Local gcloud env
+```
+gcloud init
+```
 
 
 ## Contributing changes
